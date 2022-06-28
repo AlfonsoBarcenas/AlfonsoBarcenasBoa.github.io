@@ -1,0 +1,252 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+.container{
+    width: 1920px;
+}
+
+/*MENU*/
+
+.menu{
+    position: fixed;
+    z-index: 3;
+    width: 100%;       
+}
+.menu ul{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.menu li{
+    list-style: none;
+    padding: 1rem;      
+}
+.menu a{
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: aliceblue;
+}
+.menu a:hover{
+    color: rgb(255, 33, 33);
+}
+.img-logo{
+    flex: 0.5;
+    user-select: none;
+}
+.menu.sticky{
+    background: rgba(255, 255, 255, 0.992);
+}
+.menu.sticky.menu a{
+    color: rgb(255, 33, 33);
+}
+.menu.sticky.menu a:hover{
+    color: grey;   
+}
+
+/*MENU DESPLEGABLE*/
+
+.navbar-toggle img{
+    width: 50px;
+    height: 50px;   
+}
+.navbar-toggle{
+    display: none;
+    text-align: right;
+    flex: 1;   
+}
+
+/*HEADER HOME*/
+
+.home{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+.header-video{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;   
+}
+.overlay{
+    position: absolute;
+    content: "";
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgb(0, 0, 0, .8); 
+}
+.header-logo{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/*LA SOCIETE*/
+
+.lasociete-title{
+    width: 100%;
+    height: 100%;
+    background: red;
+    display: flex;
+    align-items: center;   
+}
+.lasociete-title h1{
+    font-size: 90px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: aliceblue;
+    margin-left: 1%;
+}
+.lasociete-subtitle{
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0, .8);
+}
+.lasociete-subtitle h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: aliceblue;
+    padding: 10px 0;
+    text-align: center;
+}
+.container-lasociete-card{
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0, .8);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.lasociete-card{
+    position: relative;
+    width: 250px;
+    height: 250px;
+    border-right: solid 3px #f1f1f1;
+    margin: 50px;   
+}
+.lasociete-card .face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .5s;
+}
+.lasociete-card .front{
+    transform: perspective(600px) rotateY(0deg);
+    /*box-shadow: 0 5px 10px black;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lasociete-card .front img{
+    position: absolute;
+    width: 60%;
+    height: 60%;
+    object-fit: cover;
+}
+.lasociete-card .front h3{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45%;
+    line-height: 45px;
+    color: #f1f1f1;
+    /*background: rgba(243, 58, 58, 0.8);*/
+    text-align: center;
+    top: 210px;
+}
+.lasociete-card .back{
+    transform: perspective(600px) rotateY(180deg);
+    background: rgba(243, 58, 58);
+    padding: 10px;
+    color: #f1f1f1;
+    font-size: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;  
+    /*box-shadow: 0 5px 10px black;*/  
+}
+.lasociete-card .back h3{
+    font-size: 30px;
+    letter-spacing: 2px;
+    margin-top: -65px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.lasociete-card .back p{
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: -150px;
+}
+.lasociete-card:hover .front{
+    transform: perspective(600px) rotateY(180deg);
+}
+.lasociete-card:hover .back{
+    transform: perspective(600px) rotateY(360deg);
+}
+
+
+/*ADAPTABLE DISPOSITIVOS MOVILES*/
+@media(max-width: 1450px){
+
+
+}
+@media(max-width: 1280px){
+
+}
+
+@media(max-width: 900px){
+
+}
+@media(max-width: 800px){
+    /*MENU DESPLEGABLE*/
+    .menu ul{
+        flex-wrap: wrap;
+    }
+    .navbar-toggle{
+        display: block;    
+    }
+    .navbar-links{
+        display: none;
+        width: 100%;
+        text-align: center;
+    }
+    .active{
+        display: block;
+    }
+    .lasociete-subtitle h1{
+        font-size: 20px;
+        padding: 10px 0;
+        text-align: center;
+    }
+}
+@media(max-width: 540px){
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
